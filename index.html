@@ -1,0 +1,558 @@
+
+<div class="message-defilant">
+  <div class="texte-defilant">
+    ✨ BIENVENUE À TOI, MARION VA TE GÂTER ✨
+    &nbsp;&nbsp;&nbsp; 💜 &nbsp;&nbsp;&nbsp;
+    ✨ BIENVENUE À TOI, MARION VA TE GÂTER ✨
+  </div>
+</div>
+
+<style>
+.message-defilant {
+  width: 100%;
+  overflow: hidden;
+  background: #171020;
+  border-top: 1px solid #a020f0;
+  border-bottom: 1px solid #a020f0;
+  padding: 18px 0;
+  box-sizing: border-box;
+}
+
+.texte-defilant {
+  color: #d28aff;
+  font-size: 22px;
+  font-weight: bold;
+  white-space: nowrap;
+  display: inline-block;
+  animation: defiler 12s linear infinite;
+}
+
+@keyframes defiler {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+</style>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MARION - Formulaire</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #080510;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0c0715;
+  border-bottom: 1px solid #7722bb;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 900;
+  font-style: italic;
+  color: #b55aff;
+  text-shadow: 0 0 20px #9700ff;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.hero {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(ellipse, #4c087c, #080510 70%);
+}
+
+.hero h1 {
+  font-size: clamp(70px, 16vw, 150px);
+  margin: 15px;
+  color: #bd78ff;
+  font-style: italic;
+  text-shadow: 0 0 20px #8a00ff, 0 0 60px #8a00ff;
+}
+
+.hero p {
+  letter-spacing: 4px;
+  font-weight: bold;
+}
+
+.lightning {
+  position: absolute;
+  font-size: 100px;
+  color: #c47bff;
+  text-shadow: 0 0 20px #a000ff;
+  animation: flash 2s infinite;
+}
+
+.left { left: 5%; top: 25%; }
+.right { right: 5%; top: 25%; }
+
+@keyframes flash {
+  50% { opacity: .4; }
+}
+
+.btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #6500db, #b02cff);
+  padding: 15px 22px;
+  border: 0;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  opacity: .6;
+  cursor: wait;
+}
+
+.form-section { padding: 55px 18px; }
+
+h2 {
+  text-align: center;
+  font-size: 35px;
+}
+
+.intro {
+  text-align: center;
+  color: #c0afd2;
+}
+
+form {
+  max-width: 650px;
+  margin: 30px auto;
+  padding: 30px;
+  background: #130b20;
+  border: 1px solid #942aff;
+  border-radius: 14px;
+  box-shadow: 0 0 30px #7d13b733;
+}
+
+label {
+  display: block;
+  margin: 20px 0 8px;
+  font-weight: bold;
+}
+
+input[type="email"],
+input[type="tel"],
+input[type="number"] {
+  width: 100%;
+  padding: 14px;
+  background: #090611;
+  border: 1px solid #4b2867;
+  border-radius: 7px;
+  color: white;
+  font-size: 15px;
+}
+
+.check {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+form button {
+  width: 100%;
+  margin-top: 22px;
+  font-size: 15px;
+}
+
+#message {
+  margin-top: 18px;
+  color: #d5a4ff;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  gap: 25px;
+  flex-wrap: wrap;
+  padding: 35px 15px;
+  background: #0c0714;
+  text-align: center;
+}
+
+.features div { max-width: 240px; }
+.features h3 { color: #bd78ff; }
+
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #b9a5ce;
+  border-top: 1px solid #35134d;
+}
+
+@media (max-width: 600px) {
+  header { padding: 15px; flex-wrap: wrap; gap: 12px; }
+  nav a { margin-left: 8px; font-size: 13px; }
+  .lightning { font-size: 55px; }
+  form { padding: 20px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">MARION</div>
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#formulaire">Formulaire</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="accueil">
+  <div class="lightning left">ϟ</div>
+
+  <div>
+    <p>BIENVENUE</p>
+    <h1>MARION</h1>
+    <p>REMPLIS LE FORMULAIRE</p>
+    <a class="btn" href="#formulaire">COMMENCER ↗</a>
+  </div>
+
+  <div class="lightning right">ϟ</div>
+</section>
+
+<section class="form-section" id="formulaire">
+  <h2>Mon formulaire <span style="color:#bd78ff">.</span></h2>
+  <p class="intro">Merci de remplir les informations ci-dessous.</p>
+
+  <form id="form">
+    <label for="email">Adresse e-mail *</label>
+    <input
+      id="email"
+      name="email"
+      type="email"
+      placeholder="exemple@email.com"
+      maxlength="254"
+      required
+    >
+
+    <label for="numero">Numéro de téléphone *</label>
+    <input
+      id="numero"
+      name="numero"
+      type="tel"
+      placeholder="Ton numéro de téléphone"
+      maxlength="25"
+      required
+    >
+
+    <label for="prix">Prix (€) *</label>
+    <input
+      id="prix"
+      name="prix"
+      type="number"
+      placeholder="Exemple : 50"
+      min="0"
+      step="0.01"
+      required
+    >
+
+    <label class="check">
+      <input type="checkbox" id="consent" required>
+      <span>J'accepte que les informations fournies soient utilisées pour traiter ma demande.</span>
+    </label>
+
+    <button class="btn" id="submit-btn" type="submit">
+      Envoyer ➜
+    </button>
+
+    <div id="message" role="status" aria-live="polite"></div>
+  </form>
+</section>
+
+<section class="features" id="contact">
+  <div>
+    <h3>✦ Simple</h3>
+    <p>Un formulaire facile à remplir.</p>
+  </div>
+
+  <div>
+    <h3>ϟ Rapide</h3>
+    <p>Renseigne les informations demandées.</p>
+  </div>
+
+  <div>
+    <h3>★ MARION</h3>
+    <p>Merci de ta visite !</p>
+  </div>
+</section>
+
+<footer>
+  © <span id="year"></span> MARION - Tous droits réservés
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+document.getElementById("form").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  document.getElementById("message").textContent =
+    "Le formulaire est rempli, mais aucun envoi n'est configuré pour le moment.";
+});
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MARION - Tarifs</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #090909;
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      background: #171020;
+      padding: 25px;
+      border-bottom: 2px solid #a020f0;
+    }
+
+    h1 {
+      color: #bd55ff;
+      letter-spacing: 4px;
+    }
+
+    button {
+      background: #a020f0;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      margin: 25px;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #7b15bd;
+    }
+
+    #tarifs {
+      display: none;
+      padding: 20px;
+    }
+
+    .abonnement {
+      background: #171020;
+      border: 1px solid #a020f0;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 15px auto;
+      max-width: 350px;
+      box-shadow: 0 0 12px #6e16a0;
+    }
+
+    .prix {
+      color: #d28aff;
+      font-size: 28px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>MARION</h1>
+    <p>Découvre nos tarifs</p>
+  </header>
+
+  <button onclick="afficherTarifs()">TARIFS</button>
+
+  <section id="tarifs">
+    <h2>Nos abonnements</h2>
+
+    <div class="abonnement">
+      <h3>Abonnement 1</h3>
+      <p class="prix">10 €</p>
+    </div>
+
+    <div class="abonnement">
+      <h3>Abonnement 2</h3>
+      <p class="prix">30 €</p>
+    </div>
+
+    <div class="abonnement">
+      <h3>Abonnement 3</h3>
+      <p class="prix">50 €</p>
+    </div>
+
+    <div class="abonnement">
+      <h3>Abonnement 4</h3>
+      <p class="prix">100 €</p>
+    </div>
+
+    <div class="abonnement">
+      <h3>Abonnement 5</h3>
+      <p class="prix">200 €</p>
+    </div>
+  </section>
+
+  <script>
+    function afficherTarifs() {
+      const section = document.getElementById("tarifs");
+
+      if (section.style.display === "block") {
+        section.style.display = "none";
+      } else {
+        section.style.display = "block";
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarifs - MARION</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: #090909;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    header {
+      background: #171020;
+      padding: 25px;
+      border-bottom: 2px solid #a020f0;
+    }
+
+    h1 {
+      color: #bd55ff;
+      letter-spacing: 4px;
+    }
+
+    .contenu {
+      padding: 25px;
+    }
+
+    .abonnement {
+      background: #171020;
+      border: 1px solid #a020f0;
+      border-radius: 12px;
+      padding: 18px;
+      margin: 18px auto;
+      max-width: 350px;
+      box-shadow: 0 0 12px #6e16a0;
+    }
+
+    .prix {
+      color: #d28aff;
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    a {
+      display: inline-block;
+      margin: 25px;
+      color: white;
+      background: #a020f0;
+      padding: 12px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>MARION — TARIFS</h1>
+  </header>
+
+  <div class="contenu">
+    <h2>Nos abonnements</h2>
+
+    <div class="abonnement">
+      <h3>Abonnement 1</h3>
+      <p class="prix">10 €</p>
+    </div>
+
+    <div class="abonnement">
+      <h3>Abonnement 2</h3>
+      <p class="prix">30 €</p>
+    </div>
+
+    <div class="abonnement">
+      <h3>Abonnement 3</h3>
+      <p class="prix">50 €</p>
+    </div>
+
+    <div class="abonnement">
+      <h3>Abonnement 4</h3>
+      <p class="prix">100 €</p>
+    </div>
+
+    <div class="abonnement">
+      <h3>Abonnement 5</h3>
+      <p class="prix">200 €</p>
+    </div>
+
+    <a href="index.html">← Retour à l'accueil</a>
+  </div>
+</body>
+</html>
+
+<header>
+  <h1>MARION</h1>
+
+  <nav>
+    <a class="tarifs" href="tarifs.html">TARIFS</a>
+    <a class="tarifs" href="contacts.html">CONTACTS</a>
+  </nav>
+</header>
